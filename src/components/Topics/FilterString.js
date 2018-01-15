@@ -5,7 +5,7 @@ export default class FliterString extends Component {
         super()
         this.state = {
             names: 
-            ["Brandon", "Derek", "Alyssa","Caden","Alyssa", "Kaylee"],
+            ["Brandon", "Derek", "Alyssa","Caden","Alyssa", "Kaylee", "Brandon"],
             userInput:'',
             filteredNames:[]
 
@@ -19,7 +19,7 @@ export default class FliterString extends Component {
         var filteredNames = [];
         for(var i=0; i<names.length;i++) {
             if(names[i].includes(userInput)){
-                filteredNames.push([i]);
+                filteredNames.push(names[i]);
             }
         }
         this.setState({ filteredNames: filteredNames })
